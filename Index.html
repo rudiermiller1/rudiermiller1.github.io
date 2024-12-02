@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- Favicon -->
+<link rel="icon" href="img/favicon/16.png" sizes="16x16" type="image/png"> <!-- Favicon para navegadores y pestañas pequeñas -->
+<link rel="icon" href="img/favicon/32.png" sizes="32x32" type="image/png"> <!-- Favicon estándar para navegadores -->
+<link rel="icon" href="img/favicon/64.png" sizes="64x64" type="image/png"> <!-- Favicon para pantallas de mayor resolución -->
+<link rel="icon" href="img/favicon/512.png" sizes="512x512" type="image/png"> <!-- Favicon para aplicaciones o dispositivos con alta resolución -->
+<link rel="apple-touch-icon" href="img/apple.png"> <!-- Icono para pantallas de inicio de iOS -->
+<link rel="manifest" href="site.webmanifest"> <!-- Configuración para Progressive Web Apps (PWA) -->
+
+    <title>Proyecto HTML 5</title>
+</head>
+
+<body>
+
+<!-- Barra de navegación -->
+<nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+    <ul>
+        <li><img class="nav-icon" src="img/nav/nav3.png" alt="Icono de Computadora"></li>
+        <!-- Menú desplegable en Inicio -->
+        <li class="dropdown highlight">
+            <a href="#inicio" class="dropbtn">Inicio</a>
+        </li>
+        <!-- Menú desplegable en Computadoras -->
+        <li class="dropdown highlight">
+            <a href="#computadoras" class="dropbtn">Computadoras</a>
+            <div class="dropdown-content">
+                <a href="#pc">Computadoras personales</a>
+                <a href="#laptops">Laptops</a>
+                <a href="#moviles">Dispositivos Móviles</a>
+                <a href="#ia">Inteligencia Artificial</a>
+                <a href="#nube">Computación en la Nube</a>
+            </div>
+        </li>
+        <li class="highlight"><a href="Nosotros.html">Nosotros</a></li>
+        <li class="highlight"><a href="Contacto.html">Contacto</a></li>
+        <!-- Perfil de usuario y notificaciones -->
+        <li class="user-profile">
+            <img src="img/logo.jpg" alt="Avatar">
+            <span>Juan Gómez</span>
+        </li>
+        <li class="notifications">
+            <span class="notification-count">3</span>
+            <i class="icon-bell"></i>
+        </li>
+        <!-- Icono de carrito -->
+        <li><a href="#carrito" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
+    <!-- Campo de búsqueda -->
+        <li class="search-bar">
+            <input type="text" placeholder="Buscar..." aria-label="Buscar">
+            <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+        </li>
+
+        <!-- Icono de cerrar sesión -->
+        <li class="logout">
+            <a href="#cerrarSesion" class="logout-icon"><i class="fas fa-sign-out-alt"></i></a>
+        </li>
+    </ul>
+</nav>
+
+    <h1 id="inicio">La computadora</h1>
+
+    <p> Una computadora es un dispositivo esencial para el desarrollo web,
+    permitiendo a los desarrolladores crear y probar sitios web y aplicaciones.
+    Utiliza lenguajes como HTML para estructurar contenido,
+    editar código y visualizar resultados en navegadores web.
+    <br>
+
+    <h2>Video de Computadora</h2>
+    <!--Etiqueta de Video en HTML-->
+    <video class="video-borde" width="640" height="360" controls >
+    <source src="video/computadora.mp4" type="video/mp4">
+     Tu navegador no soporta la reproducción de video.
+    </video>
+    <br>
+    Además sirve para jugar videojuegos y realizar
+    tareas de programación, ofimática y análisis de datos.
+    <br>
+    Se clasifican en:
+   <br>
+
+    <h2 id="pc">1.Computadoras Personales (PCs)</h2>
+        <p>son dispositivos de uso individual diseñados para tareas
+           cotidianas como navegación web, ofimática, multimedia y juegos.
+           Incluyen tanto computadoras de escritorio como portátiles.
+        </p>
+        <img src="img/computadora.jpg" alt="Descripción de la imagen" width="300" height="200">
+        <br>
+         <a href="Info.html">Más información</a>
+        <hr>
+
+        <!-- Agregar un audio como fondo de html -->
+        <audio id="audioFondo" src="audio/audiofondo.mp33" autoplay loop></audio>
+
+        <h2 id="laptops">2. Portátiles o Laptops </h2>
+
+            <p>Las laptops son computadoras <b>portátiles que ofrecen un equilibrio
+           entre rendimiento y movilidad</b>, ideales para trabajar, estudiar y
+           entretenimiento. Su diseño compacto incluye pantalla, teclado,
+           y batería integrados.
+        </p>
+        <img src="img/laptop.jpg" width="300" height="200">
+        <br>
+         <a href="Info.html">Más información</a>
+        <hr>
+
+    <div class="moviles" id="moviles">
+         <h2>3. Dispositivos móviles</h2>
+
+        <!-- Contenedor para el video -->
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="video/fondo.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+        </div>
+
+    <p>Los dispositivos móviles <strong>son aparatos portátiles que combinan las
+    funciones de una computadora con la capacidad de comunicación</strong>, como
+   los smartphones y tablets. Permiten realizar diversas tareas como
+   navegar por internet, ejecutar aplicaciones, y comunicarse a través
+   de llamadas y mensajes que a su vez se clasifican en:
+    </p>
+
+    <h3><u>3.1 Tablet</u></h3>
+        <p>Las tablets son <i>dispositivos móviles <b>con pantalla táctil,</b>
+        diseñados para la portabilidad y facilidad de uso en tareas
+        como navegación web, multimedia y aplicaciones ligeras.</i>
+        </p>
+        <img src="img/tablet.jpg" width="230" height="300">
+        <br>
+        <a href="Info.html">Más información</a>
+
+        <hr>
+
+
+
+    <h3><u>3.2 Smartphone</u></h3>
+        <p> Los smartphones son <em>dispositivos móviles que combinan funciones
+            de comunicación, navegación web, multimedia y aplicaciones,
+            integrando <b>un potente hardware</b> y una pantalla táctil.</em>
+        </p>
+        <img src="img/celular.jpg" width="150" height="200">
+        <br>
+         <a href="Info.html">Más información</a>
+        <br><br>
+         </div>
+        <hr>
+
+    <div class="contenedor" id="nube">
+        <h3>Computación en la nube</h3>
+        <p>La computación en la nube es el suministro de servicios informáticos a través de internet,
+        incluyendo almacenamiento,
+        <b> procesamiento y bases de datos. Permite a los usuarios acceder
+        a recursos y aplicaciones desde cualquier lugar sin necesidad de gestionar infraestructura
+        física.</b> Esta tecnología ofrece flexibilidad, escalabilidad y reducción de costos.
+        </p>
+
+        <figure>
+            <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/MCKdahh2lSo"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+            <figcaption>
+                Este video de YouTube muestra una introducción a la computación en la nube.
+            </figcaption>
+        </figure>
+
+    </div>
+
+    <div class="contenedorIA" id="ia">
+        <h3>Inteligencia artificial</h3>
+        <p>La inteligencia artificial (IA) es la capacidad de una máquina para imitar funciones
+           cognitivas humanas, <span class="highlight">como el aprendizaje y la resolución de problemas. Utiliza algoritmos
+           y modelos para procesar datos, hacer predicciones y tomar decisiones.</span>
+           Su aplicación abarca desde asistentes virtuales hasta sistemas de análisis
+           avanzado y automatización.
+        </p>
+
+        <p>Algunos componentes clave que incluye la inteligencia artificial son:</p>
+
+        <ol>
+            <li>Aprendizaje automático</li>
+            <li>Redes Neuronales</li>
+            <li>Procesamiento de Lenguaje Natural</li>
+            <li>Ética y Gobernanza de la IA</li>
+        </ol>
+    </div>
+
+     <!-- Inicio de footer -->
+    <footer>
+         <img class="logo" src="img/nav/nav3.png" alt="Logo" />
+         <div class="socials">
+           <a class="fa-brands fa-twitter" href="#"></a>
+           <a class="fa-brands fa-discord" href="#"></a>
+           <a class="fa-brands fa-linkedin" href="#"></a>
+           <a class="fa-brands fa-instagram" href="#"></a>
+         </div>
+         <div class="links">
+           <!-- Services Section -->
+           <ul>
+             <li>
+               <h2>Servicios</h2>
+             </li>
+             <li><a href="#">Inversión</a></li>
+             <li><a href="#">Hardware</a></li>
+             <li><a href="#">Monitoreo</a></li>
+             <li><a href="#">Estado</a></li>
+             <li><a href="#">Puntos de acceso</a></li>
+
+           </ul>
+           <!-- Resources Section -->
+           <ul>
+             <li>
+               <h2>Recursos</h2>
+             </li>
+             <li><a href="#">Precios</a></li>
+             <li><a href="#">Listados</a></li>
+             <li><a href="#">Informes</a></li>
+             <li><a href="#">API</a></li>
+             <li><a href="#">Preguntas frecuentes</a></li>
+
+           </ul>
+           <!-- Company Section -->
+           <ul>
+             <li>
+               <h2>Compañía</h2>
+             </li>
+             <li><a href="#">Blog</a></li>
+             <li><a href="#">Sala de prensa</a></li>
+             <li><a href="#">Sobre nosotros</a></li>
+             <li><a href="#">Recursos</a></li>
+
+           </ul>
+           <!-- Contact Section -->
+           <ul>
+             <li>
+               <h2>Computadoras Inc.</h2>
+             </li>
+             <li>12546 San Miguel - Lima</li>
+             <li>Ca, José Martí 34543</li>
+             <li>+1 (345) 432 4332</li>
+           </ul>
+         </div>
+         <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+       </footer>
+   <!-- Final de footer -->
+
+    <script src="js/audio.js"></script>
+    <script src="js/nav.js"></script>
+
+</body>
+</html>
