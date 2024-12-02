@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/contacto.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	<!-- Favicon -->
+	<link rel="icon" href="img/favicon/16.png" sizes="16x16" type="image/png"> <!-- Favicon para navegadores y pestañas pequeñas -->
+	<link rel="icon" href="img/favicon/32.png" sizes="32x32" type="image/png"> <!-- Favicon estándar para navegadores -->
+	<link rel="icon" href="img/favicon/64.png" sizes="64x64" type="image/png"> <!-- Favicon para pantallas de mayor resolución -->
+	<link rel="icon" href="img/favicon/512.png" sizes="512x512" type="image/png"> <!-- Favicon para aplicaciones o dispositivos con alta resolución -->
+	<link rel="apple-touch-icon" href="img/apple.png"> <!-- Icono para pantallas de inicio de iOS -->
+	<link rel="manifest" href="site.webmanifest"> <!-- Configuración para Progressive Web Apps (PWA) -->
+
+	<title>Contacto</title>
+</head>
+<body>
+	<div class="form-container">
+		<!-- Sección de inicio de sesión (Login) -->
+		<form class="login-container" id="login-container" action="" method="POST">
+			<h1 class="title">Log In</h1>
+			<p class="desc">Ingresa para explorar lo último en tecnología</p>
+			<div class="input-container">
+				<label for="login-email">Correo Electrónico</label>
+				<input id="login-email" type="email" placeholder="Ingresa tu correo" required />
+			</div>
+
+			<div class="account-container">
+				<a href="#">Olvidé mi contraseña</a>
+				<button>Siguiente <i class="fa fa-angle-right"></i></button>
+			</div>
+			<span class="line-text">O inicia sesión con:</span>
+			<div class="social-logins">
+				<button class="social-login facebook">
+					<i class="fab fa-facebook-f"></i>
+				</button>
+				<button class="social-login google">
+					<i class="fab fa-google"></i>
+				</button>
+			</div>
+
+			<span class="signup-text">¿Todavía no tienes una cuenta? <a href="#" class="signup-form-text" id="signup-form-toggler"> Registrarme</a></span>
+		</form>
+	</div>
+
+	<div class="placeholder-banner" id="banner">
+		<img src="img/form.jpg" alt="banner" class="banner" />
+	</div>
+
+	<div class="form-container">
+		<!-- Sección de registro (Sign Up) -->
+		<form class="signup-container" id="signup-container" action="" method="POST">
+			<h1 class="title">Sign Up</h1>
+			<p class="desc">Crea tu cuenta para explorar y adquirir lo último en equipos tecnológicos</p>
+			<div class="input-container">
+				<label for="signup-name">Nombre</label>
+				<input id="signup-name" name="name" type="text" placeholder="Ingresa tu nombre" required />
+				<label for="signup-email">Correo</label>
+				<input id="signup-email" type="email" placeholder="Ingresa tu correo" required />
+				<label for="signup-password">Contraseña</label>
+				<input id="signup-password" type="password" placeholder="Ingresa tu contraseña" required />
+			</div>
+			<div class="account-container">
+				<button type="submit">Siguiente <i class="fa fa-angle-right"></i></button>
+			</div>
+			<span class="line-text">O regístrate con:</span>
+			<div class="social-logins">
+				<button class="social-login facebook">
+					<i class="fab fa-facebook-f"></i>
+				</button>
+				<button class="social-login google">
+					<i class="fab fa-google"></i>
+				</button>
+			</div>
+			<span class="signup-text">¿Ya tienes una cuenta? <a href="#" id="login-form-toggler"> Inicia sesión aquí</a></span>
+		</form>
+	</div>
+
+	<script src="js/contacto.js"></script>
+</body>
+</html>
