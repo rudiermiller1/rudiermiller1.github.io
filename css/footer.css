@@ -1,0 +1,146 @@
+footer {
+  position: relative; /* Fija el footer al fondo de la pantalla */
+  left: 0; /* Alinea el footer a la izquierda */
+  bottom: 0; /* Alinea el footer al fondo */
+  right: 0; /* Alinea el footer a la derecha */
+  padding: 10px; /* Añade espacio interior en el footer */
+  background: linear-gradient(90deg, #636363, #2a2a2a); /* Gradiente de gris claro a gris oscuro */
+  display: grid; /* Usa grid para la disposición */
+  grid-template-areas: "logo socials" "links links"; /* Define las áreas del grid */
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+  gap: 10px; /* Espacio entre las columnas */
+  color: #f9f9f9; /* Color del texto */
+  z-index: 100; /* Asegura que el footer esté siempre visible sobre otros elementos */
+}
+
+footer::after {
+  content: ""; /* Crea un pseudo-elemento para agregar un fondo */
+  position: absolute; /* Lo posiciona absolutamente en el footer */
+  z-index: -1; /* Lo coloca detrás del contenido del footer */
+  top: 0; left: 0; right: 0; /* Establece el área del pseudo-elemento */
+  height: 68px; /* Altura del fondo adicional */
+  background: rgb(0 0 0 / 10%); /* Fondo oscuro transparente */
+}
+
+.logo {
+  width: auto; /* Deja que el logo mantenga su proporción */
+  height: 30px; /* Establece una altura predeterminada para el logo */
+  margin-left: 60px; /* Mueve el logo 20px hacia la izquierda */
+}
+
+@media (max-width: 500px) {
+  .logo {
+    height: 40px; /* Ajusta la altura del logo en pantallas pequeñas */
+  }
+}
+
+.socials {
+  grid-area: socials;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  margin-left: -20px; /* Mueve los íconos 20px hacia la izquierda */
+}
+.socials a {
+  color: #f9f9f9; /* Color de los íconos */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  font-size: 20px; /* Tamaño de los íconos */
+}
+
+/* Mover los íconos hacia la izquierda en pantallas grandes */
+@media (min-width: 1024px) {
+  .socials {
+    margin-left: -20px; /* Mueve los íconos 20px hacia la izquierda */
+  }
+}
+
+.links {
+  grid-area: links; /* Coloca este bloque en el área 'links' */
+  display: grid; /* Usa grid para organizar los enlaces */
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de igual tamaño */
+  gap: 20px; /* Espacio entre las columnas */
+  padding-top: 20px; /* Espacio superior */
+}
+
+.links ul {
+  margin: 0; /* Elimina el margen */
+  padding: 0; /* Elimina el relleno */
+  list-style: none; /* Elimina los puntos de la lista */
+  display: flex; /* Flexbox para los elementos de lista */
+  flex-direction: column; /* Coloca los elementos en una columna */
+  gap: 10px; /* Espacio entre los elementos */
+}
+
+.links h2 {
+  font-size: 16px; /* Tamaño del título */
+  color: #fff; /* Color blanco para los títulos */
+  margin-bottom: 10px; /* Espacio debajo de los títulos */
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding-left: 0; /* Elimina cualquier padding adicional */
+}
+
+.links ul li {
+  font-size: 14px; /* Tamaño de fuente para los ítems */
+  opacity: 0.8; /* Opacidad ligera para los ítems */
+  padding-left: 50px; /* Mueve los ítems hacia la derecha */
+}
+
+.links ul li a {
+  color: #f9f9f9; /* Color blanco para los enlaces */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.links ul li a:hover {
+  text-decoration: underline; /* Subraya los enlaces al pasar el ratón */
+}
+
+/* Media Queries para Responsividad */
+/* Pantallas pequeñas: Ajustar disposición */
+@media (max-width: 768px) {
+  footer {
+    grid-template-areas:
+      "logo"
+      "links"
+      "socials"; /* Redes sociales debajo de las listas */
+    grid-template-columns: 1fr; /* Una columna */
+    text-align: center; /* Centra el texto */
+  }
+
+  .socials {
+    justify-content: center; /* Centra los íconos */
+    gap: 15px; /* Espacio entre los íconos */
+  }
+
+  .links {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 10px; /* Espacio entre columnas */
+  }
+}
+
+/* Pantallas muy pequeñas: Disposición vertical */
+@media (max-width: 480px) {
+  footer {
+    grid-template-areas:
+      "logo"
+      "links"
+      "socials"; /* Redes sociales debajo de las listas */
+    grid-template-columns: 1fr; /* Una columna */
+  }
+
+  .socials {
+    flex-wrap: wrap; /* Permite que los íconos se ajusten en varias líneas */
+    justify-content: center; /* Centra los íconos */
+    padding-top: 20px; /* Espacio arriba de los íconos */
+  }
+
+  .links {
+    grid-template-columns: 1fr; /* Una columna para los enlaces */
+    gap: 20px; /* Espacio entre enlaces */
+  }
+
+  .logo {
+    margin: 0 auto; /* Centra el logo */
+  }
+}

@@ -1,0 +1,244 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex; /* Activa el modelo flexbox para el contenido */
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+h1{
+    color: white;
+}
+#videoTitle {
+    color: white; 
+    margin-left: 20px; /* Ajusta la posición hacia la derecha */
+    padding: 10px 10px; /* Espacio alrededor del texto */
+    background-color: rgba(30, 172, 73, 0.5); /* Fondo verde con 50% de transparencia */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 15px; /* Borde levemente redondeado */
+    display: inline-block; /* Asegura que el fondo y borde se adapten solo al texto */
+}
+.main-container {
+    width: 100vw;
+    background-color: #5d6d7e; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0; /* Elimina cualquier espacio interno */
+    margin: 0; /* Elimina el margen */
+    position: absolute;
+    top: 0; /* Fija el contenedor al borde superior */
+    left: 0;
+    padding-bottom: 10px; /* Espacio debajo del video */
+    box-sizing: border-box;
+}
+.container {
+    text-align: center;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 5px solid #3D3D3D; /* Borde aplicado solo al contenedor, no al video */
+    box-sizing: border-box;
+}
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el contenedor */
+    border: none; /* Elimina cualquier borde en el video */
+    border-radius: inherit; /* Hereda el borde redondeado del contenedor */
+    display: block;
+}
+.controls {
+    display: flex;
+    align-items: center;
+    background-color: #3D3D3D;
+    padding: 5px;
+    height: 40px; /* Ajusta la altura de los controles */
+    border-radius: 0 0 2px 2px; /* Bordes redondeados en la parte inferior */
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0; /* Posiciona los controles al final de `.video-container` */
+    left: 0;
+}
+.progress-container {
+    flex-grow: 1; /* Hace que la barra de progreso ocupe el espacio disponible */
+    margin: 0 10px; /* Espacio lateral */
+}
+.control-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px; /* Define el tamaño de los íconos */
+    margin: 0 5px;
+    cursor: pointer;
+}
+.progress-bar {
+    width: 100%;
+    cursor: pointer;
+    -webkit-appearance: none; /* Elimina el estilo predeterminado*/
+    background: #444; /* Fondo gris para la barra de progreso */
+    height: 5px;
+    border-radius: 5px;
+}
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Elimina el estilo predeterminado*/
+    appearance: none;
+    width: 15px; /* Tamaño del pulgar */
+    height: 15px;
+    border-radius: 50%;
+    background: #2ecc71; /* Pulgar de progreso en verde */
+    position: relative;
+    top: -2px; /* Ajuste vertical del pulgar */
+}
+.progress-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #2ecc71; /* Pulgar de progreso en verde */
+}
+#currentTime, #duration {
+    color: white;
+    font-size: 14px;
+    margin: 0 10px;
+}
+.d-none {
+    display: none;
+}
+/* Estilos para la barra de volumen */
+.volume-bar {
+    width: 100px; /* Tamaño del control de volumen */
+    cursor: pointer;
+    margin-left: 10px; /* Espacio a la izquierda */
+    -webkit-appearance: none; /* Elimina estilo predeterminado */
+    background: #444; /* Fondo gris */
+    height: 5px;
+    border-radius: 5px;
+}
+.volume-bar::-webkit-slider-runnable-track {
+    background: #444; /* Color inicial de la pista */
+    border-radius: 5px;
+    height: 5px;
+}
+.volume-bar::-moz-range-track {
+    background: #444; /* Pista de volumen para Firefox */
+    border-radius: 5px;
+    height: 5px;
+}
+.volume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #2ecc71; /* Pulgar de volumen en verde */
+    position: relative;
+    top: -5px; /* Ajuste vertical del pulgar */
+}
+.volume-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #2ecc71; /* Pulgar de volumen en verde */
+}
+.volume-bar:focus {
+    outline: none; /* Elimina borde al enfocar */
+}
+.video-description {
+    display: flex;
+    justify-content: space-between; /* Espaciado entre texto e íconos */
+    align-items: center;
+    margin-top: 10px;
+    color: #333; /* Color del texto */
+    font-size: 18px;
+}
+.social-icons {
+    display: flex;
+    align-items: center;
+    transform: translateX(-30px); /* Mueve el contenedor 10px hacia la izquierda */
+}
+.social-button {
+    background: none;
+    border: none;
+    color: #2196F3; /* Color de íconos sociales */
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.social-button:hover {
+    color: #2ecc71; /* Cambia a verde al pasar el mouse */
+}
+.social-button {
+    background-color: #444; /* Color de fondo */
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Alto del botón */
+    border-radius: 50%; /* Hace que el fondo sea redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s; /* Transición suave */
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 5px solid #3D3D3D;
+    box-sizing: border-box;
+}
+.config-menu {
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    background-color: #3D3D3D;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    width: 150px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.config-option {
+    margin-bottom: 10px;
+}
+.config-option label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+/* Estilos generales para los select */
+.config-option select {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    background-color: #444;
+    color: white;
+    position: relative;
+    z-index: 20;
+}
+.speed-select:focus {
+    outline: none;
+}
+
+
+
+
+
+

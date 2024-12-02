@@ -1,0 +1,58 @@
+            audio {
+                    border: 2px solid #000; /* Borde de 2px de color negro */
+                    padding: 5px;           /* Espacio entre el borde y el contenido */
+                    border-radius: 12px;     /* Esquinas redondeadas, opcional */
+                  }
+
+         /* Agregar un estilo a la etiqueta div */
+            .contenedor {
+                            border: 1px solid #000; /* Agregar borde de 1px al div */
+                            padding: 20px; /* espacio interior 20px del div */
+                            /*background-color: #c0b9b9; /* Color de fondo del div */
+                        }
+
+        .highlight { /* clase de etiqueta span */
+                        color: red; /* Color de texto dentro de la etiqueta span */
+                        font-weight: bold; /* Aspeto de texto dentro de la etiqueta span */
+                        /*background-color: aliceblue; /* Fondo del texto de la etiqueta span */
+                    }
+            
+        .contenedorIA {/* clase de div IA */
+                        border: 2px solid #c45050; /* Agregar borde de 2px al div IA */
+                        border-radius: 4%; /* Borde radial del div IA*/
+                        padding: 50px; /* espacio interior 50px del div */
+                        background-color: #89be8b; /* Color de fondo del div IA */
+                      }
+
+        .video-borde {
+                        border: 5px solid black;
+                     }
+
+    .moviles {
+        position: relative; /* Necesario para posicionar el video relativo a este div */
+        overflow: hidden; /* Asegura que nada se desborde fuera del div */
+        color: white;
+    }
+
+    .video-background {
+        position: absolute; /* Posiciona el video de forma absoluta dentro de .moviles */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Asegura que el video cubra todo el div */
+        overflow: hidden;
+        z-index: -1; /* Coloca el video detrás del contenido */
+    }
+
+    .video-background video {
+        width: 100%; /* Hace que el video ocupe todo el ancho */
+        height: 100%; /* Hace que el video ocupe toda la altura */
+        object-fit: cover; /* Asegura que el video cubra el área del contenedor */
+    }
+    img {
+        display: block; /* Cambia a bloque para centrar */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+    .moviles p, h2, h3{
+      padding: 0 50px; /* 10px de espacio a los lados izquierdo y derecho */
+    }

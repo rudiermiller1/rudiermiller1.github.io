@@ -1,0 +1,179 @@
+body {
+    margin: 0; 
+    padding: 0; 
+}
+
+/* Estilos de la barra de navegación */
+nav {
+    background-color: #333; /* Color de fondo */
+    padding: 15px 0; /* Espaciado */
+    position: relative; /* Para posicionar elementos hijos */
+    z-index: 1; /* Para superposición */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+nav ul {
+    list-style-type: none; /* Sin viñetas */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Disposición en fila */
+    justify-content: center; /* Centrar elementos */
+    align-items: center;
+    flex-wrap: wrap; /* Ajustar en pantallas pequeñas */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaciado entre elementos */
+    position: relative; /* Para pseudo-elementos */
+    background: none; /* Asegura que no haya fondo blanco */
+}
+
+/* Enlaces de navegación */
+nav ul li a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+    padding: 10px 0; /* Espacio debajo del texto */
+    background: none; /* Asegura que no haya fondo blanco */
+}
+
+/* Efecto de subrayado amarillo solo para elementos con la clase highlight */
+nav ul li.highlight > a::after {
+    content: ''; /* Pseudo-elemento */
+    position: absolute; /* Posición absoluta */
+    left: 0; /* Alineación */
+    bottom: -6px; /* Espacio debajo */
+    width: 0; /* Ancho inicial */
+    height: 3px; /* Altura de la línea */
+    background-color: rgba(255, 255, 0, 0.7); /* Color amarillo */
+    transition: width 0.4s ease; /* Transición suave */
+}
+
+nav ul li.highlight:hover > a::after {
+    width: 100%; /* Muestra la línea completa */
+}
+
+/* Estilos del dropdown */
+.dropdown-content {
+    display: none; /* Oculto por defecto */
+    position: absolute; /* Posicionamiento absoluto */
+    background-color: #333; /* Color de fondo */
+    padding: 10px 0; /* Espaciado */
+    border-radius: 4px; /* Bordes redondeados */
+    z-index: 100; /* Sobre otros elementos */
+    min-width: 150px; /* Ancho mínimo */
+    top: calc(100% + 8px); /* Justo debajo del nav, 8px adicional para ver el subrayado */
+}
+
+nav ul li:hover .dropdown-content {
+    display: block; /* Muestra el dropdown al pasar el mouse */
+}
+
+.dropdown-content a {
+    padding: 8px 16px; /* Espaciado */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: block; /* Ocupa toda la línea */
+    background: none; /* Asegura que no haya fondo blanco */
+}
+
+.dropdown-content a:hover {
+    background-color: #444; /* Fondo oscuro al pasar el mouse */
+}
+
+/* Estilo del perfil de usuario */
+.user-profile {
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.user-profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Estilos de notificaciones */
+.notifications {
+    position: relative;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+.icon-bell {
+    font-size: 20px;
+    color: white;
+}
+
+/* Ajuste del icono */
+.nav-icon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    position: relative;
+    left: -80px;
+    vertical-align: middle;
+    background-color: transparent;
+    z-index: 1;
+}
+
+/* Menu hamburguesa en pantallas pequeñas */
+.menu-toggle {
+    display: none; /* Oculto en pantallas grandes */
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Separar el icono del carrito */
+nav ul li:last-child {
+    margin-left: 50px; /* Mueve el icono del carrito */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Vertical en pantallas pequeñas */
+        display: none; /* Oculto por defecto */
+        width: 100%; /* Ancho completo */
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espaciado vertical */
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el menú hamburguesa */
+    }
+
+    .menu-toggle.active + ul {
+        display: flex; /* Muestra el menú al hacer clic */
+    }
+
+    /* Centrar la imagen en el nav */
+    .nav-icon {
+        left: 0; /* Restablecer el movimiento a la izquierda */
+        margin: 0 auto; /* Centramos la imagen */
+    }
+}

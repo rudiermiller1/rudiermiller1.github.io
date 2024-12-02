@@ -1,0 +1,70 @@
+
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex; /* Activar Flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    }
+
+
+    .form-container { /* Estilo del contenedor del formulario */
+      max-width: 600px;
+      background-color: #E7DDFF;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .form-group { /* Estilo para cada grupo de formulario */
+      margin-bottom: 15px;
+    }
+
+    .form-group label { /* Estilo para las etiquetas dentro de cada grupo de formulario */
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {  /* Estilo común para los campos de entrada */
+
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+
+
+    .form-group button { /* Estilo para el botón dentro de cada grupo de formulario */
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-group button:hover { /* Estilo del botón cuando se pasa el cursor sobre él */
+      background-color: #0056b3;
+    }
+
+    .info {
+    text-align: center; /* Centrar texto e imagen dentro del div */
+    }
+
+.video-borde {
+                    border: 5px solid black;
+                 }
+                 
+audio {
+                border: 2px solid #000; /* Borde de 2px de color negro */
+                padding: 5px;           /* Espacio entre el borde y el contenido */
+                border-radius: 12px;     /* Esquinas redondeadas, opcional */
+              }
+
+

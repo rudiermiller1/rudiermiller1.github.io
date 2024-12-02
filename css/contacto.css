@@ -1,0 +1,293 @@
+/* Reset: Restablece márgenes, padding y box-sizing en todos los elementos */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body: Estilos globales para el cuerpo del documento */
+body {
+  font-family: "Roboto", sans-serif; /* Establece la fuente */
+  height: 100vh; /* Altura total de la ventana */
+  display: flex; /* Flexbox para centrar contenido */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  background-color: #8fe9ff; /* Color de fondo */
+}
+
+/* Form Container: Contenedor principal del formulario */
+.form-container {
+  height: 500px; /* Altura fija */
+  width: 500px; /* Ancho fijo */
+  border-radius: 10px; /* Bordes redondeados */
+  display: flex; /* Usamos Flexbox */
+  align-items: center; /* Centra el contenido verticalmente */
+  background-color: white; /* Fondo blanco */
+  overflow: hidden; /* Esconde el contenido fuera de los bordes */
+  position: relative; /* Posición relativa para elementos internos */
+}
+
+/* Responsiveness: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%; /* 90% de ancho para pantallas pequeñas */
+    height: auto; /* Altura automática */
+    flex-direction: column; /* Disposición en columna */
+  }
+
+  .placeholder-banner {
+    display: none; /* Oculta el banner */
+  }
+}
+
+/* Login & Signup Container: Estilos para los contenedores de login y signup */
+.login-container,
+.signup-container {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 40px; /* Espaciado interno */
+  height: 100%; /* Altura completa */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Dirección en columna */
+  justify-content: center; /* Centra el contenido */
+  gap: 15px; /* Espacio entre elementos */
+  transition: all 500ms ease; /* Transición suave */
+  padding-left: 80px; /* Mueve el contenido hacia la derecha */
+}
+
+/* Signup Container: Escala el contenedor en el registro */
+.signup-container {
+  transform: scale(0); /* Inicialmente está oculto */
+}
+
+/* Title: Estilo del título */
+.title {
+  font-size: 20px; /* Tamaño de fuente */
+  font-weight: 500; /* Peso de fuente */
+}
+
+/* Description: Estilo de la descripción */
+.desc {
+  font-size: 12px; /* Tamaño de fuente */
+}
+
+/* Estilo general para los campos de entrada */
+.input-container {
+  width: 60%; /* Ancho del 60% */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Dirección en columna */
+  gap: 10px; /* Espacio entre elementos */
+}
+
+.input-container label {
+  font-size: 14px; /* Tamaño de fuente */
+  font-weight: 500; /* Peso de fuente */
+  color: #333; /* Color del texto */
+  margin-bottom: 3px; /* Espacio debajo del label */
+  transition: color 0.3s ease; /* Transición en el color */
+}
+
+/* Estilo de los inputs dentro de .input-container */
+.input-container input {
+  width: 100%; /* Ocupa el 100% del ancho */
+  max-width: 400px; /* Limita el ancho máximo */
+  height: 30px; /* Altura de los inputs */
+  padding: 10px; /* Espaciado interno */
+  border: 2px solid #8ce0eb; /* Color del borde */
+  border-radius: 2px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de texto */
+  font-family: 'Roboto', sans-serif; /* Fuente */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Efecto focus en los inputs */
+.input-container input:focus {
+  border-color: #046586; /* Color de borde al enfocar */
+  outline: none; /* Elimina el contorno predeterminado */
+  box-shadow: 0 0 8px rgba(4, 101, 134, 0.3); /* Sombra sutil */
+}
+
+/* Efecto hover en los inputs */
+.input-container input:hover {
+  border-color: #73aabb; /* Cambia el borde al pasar el ratón */
+  box-shadow: 0 0 5px rgba(4, 101, 134, 0.1); /* Sombra sutil en hover */
+}
+
+/* Validación: Estilo para inputs válidos */
+.input-container input:valid {
+  border-color: #4caf50; /* Verde para campos válidos */
+}
+
+/* Validación: Estilo para inputs inválidos */
+.input-container input:invalid {
+  border-color: #f44336; /* Rojo para campos inválidos */
+}
+
+/* Estilo del botón Next */
+.account-container button {
+  width: 40%; /* Ancho reducido */
+  height: 35px; /* Altura del botón */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 14px; /* Tamaño de texto */
+  font-weight: 600; /* Peso de fuente */
+  background-color: #046586; /* Color de fondo */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Indica interactividad */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  box-shadow: 0 4px 8px rgba(4, 101, 134, 0.2); /* Sombra ligera */
+  margin: 0 auto; /* Centra el botón horizontalmente */
+}
+
+/* Efecto hover en el botón */
+.account-container button:hover {
+  background-color: #034a5d; /* Cambia el color de fondo */
+  transform: scale(1.05); /* Agranda el botón ligeramente */
+  box-shadow: 0 6px 12px rgba(4, 101, 134, 0.3); /* Sombra más fuerte */
+}
+
+/* Efecto focus en el botón */
+.account-container button:focus {
+  outline: none; /* Elimina el contorno predeterminado */
+  box-shadow: 0 0 8px rgba(4, 101, 134, 0.5); /* Sombra más pronunciada */
+}
+
+/* Account Controls: Estilos para los controles de cuenta */
+.account-controls {
+  display: flex; /* Flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: space-between; /* Espacio entre elementos */
+}
+
+/* Account Control Links: Estilos para los enlaces de control de cuenta */
+.account-controls > a {
+  text-decoration: none; /* Elimina subrayado */
+  color: #5293ac; /* Color de texto */
+  font-size: 12px; /* Tamaño de fuente */
+}
+
+/* Account Control Button: Estilo del botón de control de cuenta */
+.account-controls > button {
+  width: 65px; /* Ancho del botón */
+  height: 30px; /* Altura del botón */
+  display: flex; /* Flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  gap: 5px; /* Espacio entre los elementos del botón */
+  border: none; /* Sin borde */
+  background: #046586; /* Fondo del botón */
+  color: white; /* Color del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Indica interactividad */
+  transition: transform 500ms ease, background 300ms ease; /* Transiciones suaves */
+  box-shadow: 3px 3px 10px #73aabb; /* Sombra ligera */
+}
+
+/* Hover en el botón de control de cuenta */
+.account-controls > button:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  background: #034a5d; /* Cambia el fondo */
+}
+
+/* Line Separator: Línea divisoria */
+.line {
+  width: 100%; /* Ocupa todo el ancho */
+  height: 2px; /* Altura de la línea */
+  background-color: #bfc0c9; /* Color de la línea */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Other Login Text: Estilo del texto de otros métodos de login */
+.other-login-text {
+  text-align: center; /* Centra el texto */
+  font-size: 12px; /* Tamaño de texto */
+  color: #333333; /* Color del texto */
+}
+
+/* Placeholder Banner: Estilo del banner de imagen */
+.placeholder-banner {
+  width: 50%; /* Ancho del banner */
+  height: 100%; /* Altura del banner */
+  position: absolute; /* Posición absoluta */
+  right: 0; /* Alinea a la derecha */
+  transition: all 500ms ease; /* Transición suave */
+  z-index: 4; /* Asegura que esté por encima de otros elementos */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+/* Hover en el banner */
+.placeholder-banner:hover {
+  transform: translateX(-5%) scale(1.05); /* Mueve y agranda ligeramente */
+}
+
+/* Social Logins: Estilos para los botones de login social */
+.social-logins {
+  display: flex; /* Flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  gap: 10px; /* Espacio entre botones */
+}
+
+/* Social Login Button: Estilo de los botones de login social */
+.social-login {
+  height: 40px; /* Altura del botón */
+  aspect-ratio: 1 / 1; /* Relación de aspecto cuadrada */
+  border: 2px solid #bfc0c9; /* Borde gris claro */
+  background-color: white; /* Fondo blanco */
+  border-radius: 50%; /* Bordes redondeados */
+  display: flex; /* Flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  cursor: pointer; /* Indica interactividad */
+  transition: transform 500ms ease; /* Transición suave */
+}
+/* Hover en los botones de login social */
+.social-login:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Iconos dentro de los botones de login social */
+.social-login i {
+  font-size: 20px; /* Tamaño del icono */
+  color: inherit; /* Hereda el color del contenedor */
+}
+
+/* Facebook Icon: Estilo del icono de Facebook */
+.social-login.facebook {
+  color: #3b5998; /* Color de Facebook */
+}
+
+/* Google Icon: Estilo del icono de Google */
+.social-login.google {
+  color: #ea4335; /* Color de Google */
+}
+
+/* Signup Text: Estilo del texto de signup */
+.signup-text {
+  margin-top: 5px; /* Espacio superior */
+  font-size: 12px; /* Tamaño de fuente */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Toggler Links: Estilo de los enlaces para cambiar entre login y signup */
+#signup-form-toggler,
+#login-form-toggler {
+  cursor: pointer; /* Indica interactividad */
+  text-decoration: none; /* Sin subrayado */
+  color: #046586; /* Color de texto */
+}
+
+#signup-form-toggler:hover,
+#login-form-toggler:hover {
+  border-bottom: 1px solid; /* Subrayado al pasar el ratón */
+}
+
+/* Banner Image: Estilo de la imagen del banner */
+.banner {
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  object-fit: cover; /* Asegura que la imagen cubra el área */
+  transition: transform 500ms ease; /* Transición suave */
+  background: linear-gradient(135deg, #8fe9ff, #73aabb); /* Degradado de fondo */
+}
